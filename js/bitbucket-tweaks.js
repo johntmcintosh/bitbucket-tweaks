@@ -66,10 +66,14 @@ function hotkeyPreviousFile() {
 
     var currentIndex = fileHashes.indexOf(currentFileHash)
     
+    var nextIndex = 0
     if (currentIndex > 0) { 
-        var nextIndex = currentIndex - 1;
-        $('a[href^="#chg-"]').eq(nextIndex).get(0).click();
+        nextIndex = currentIndex - 1;
     }
+    
+    var nextElement = $('a[href^="#chg-"]').eq(nextIndex).get(0);
+    nextElement.click();
+    nextElement.scrollIntoViewIfNeeded();
 }
 
 function hotkeyNextFile() { 
@@ -82,11 +86,14 @@ function hotkeyNextFile() {
 
     var currentIndex = fileHashes.indexOf(currentFileHash)
     
+    var nextIndex = 0
     if (currentIndex < 0 && fileHashes.length > 1) { 
-        var nextIndex = 1;
-        $('a[href^="#chg-"]').eq(nextIndex).get(0).click();
+        nextIndex = 1;
     } else if (currentIndex < (fileHashes.length - 1)) { 
-        var nextIndex = currentIndex + 1;
-        $('a[href^="#chg-"]').eq(nextIndex).get(0).click();
+        nextIndex = currentIndex + 1;
     }
+
+    var nextElement = $('a[href^="#chg-"]').eq(nextIndex).get(0);
+    nextElement.click();
+    nextElement.scrollIntoViewIfNeeded();
 }
