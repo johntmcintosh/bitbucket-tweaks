@@ -97,3 +97,25 @@ function hotkeyNextFile() {
     nextElement.click();
     nextElement.scrollIntoViewIfNeeded();
 }
+
+Mousetrap.bind('c', function() { 
+    processComments();
+});
+
+function processComments() { 
+    var fileAnchors = $('a[href^="#chg-"]').toArray();
+    fileAnchors.forEach(anchor => {
+        var hash = anchor.hash
+
+        var hashId = hash.substring(1);
+        var fileMarkerDiv = $('#'+$.escapeSelector(hashId));
+        var fileDiv = $(fileMarkerDiv).parent();
+
+        var numComments = fileDiv.find($('div[id^="comment-"]')).toArray().length;        
+        if (numComments > 0) { 
+            $(anchor).children().last().html("💬 "+numComments);
+        } else { 
+            $(anchor).children().last().html("");
+        }
+    });
+}
