@@ -1,0 +1,21 @@
+{
+    "manifest_version": 2,
+    "name": "bitbucket-tweaks",
+    "description": "This extension customizes bitbucket code reviews.",
+    "version": "0.1",
+    "content_scripts": [
+        {
+            "matches": [
+                "https://bitbucket.org/*"
+            ],
+            "css": [
+                "css/override.css"
+            ],
+            "js": [
+                "lib/jquery-3.5.1.min.js",
+                "lib/mousetrap.min.js",
+                "js/bitbucket-tweaks.js"
+            ]
+        }
+    ]
+}

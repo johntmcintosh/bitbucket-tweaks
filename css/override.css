@@ -1,0 +1,19 @@
+/* Added code */
+.bitkit-diff-wrapper-diff .line-wrapper.type-add {
+    background-color: #e4fee0 !important;
+}
+
+/* Added code, highlighted */
+.bitkit-diff-wrapper-diff .code-component ins {
+    background-color: #acf09e !important;
+}
+
+/* Removed code */
+.bitkit-diff-wrapper-diff .line-wrapper.type-del {
+    background-color: #fbe9e9 !important;
+}
+
+/* Removed code, highlighted */
+.bitkit-diff-wrapper-diff .code-component del {
+    background-color: #f4b9bb !important;
+}
