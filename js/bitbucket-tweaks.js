@@ -91,9 +91,13 @@ function hotkeyNextFile() {
         nextIndex = 1;
     } else if (currentIndex < (fileHashes.length - 1)) { 
         nextIndex = currentIndex + 1;
+    } else if (currentIndex == fileHashes.length - 1) { 
+        nextIndex = -1;
     }
 
-    var nextElement = $('a[href^="#chg-"]').eq(nextIndex).get(0);
-    nextElement.click();
-    nextElement.scrollIntoViewIfNeeded();
+    if (nextIndex >= 0) {
+        var nextElement = $('a[href^="#chg-"]').eq(nextIndex).get(0);
+        nextElement.click();
+        nextElement.scrollIntoViewIfNeeded();
+    }
 }
