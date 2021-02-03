@@ -19,6 +19,10 @@
 }
 
 /* Folder buttons in the file tree */
-.css-16ojms1 {
+/* 
+    css-16ojms1 - expanded folder
+    css-1ezif6n - collapsed folder
+ */
+.css-16ojms1, .css-1ezif6n {
     color: #5e6c84 !important;
 }
