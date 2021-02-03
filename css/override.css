@@ -17,3 +17,8 @@
 .bitkit-diff-wrapper-diff .code-component del {
     background-color: #f4b9bb !important;
 }
+
+/* Folder buttons in the file tree */
+.css-16ojms1 {
+    color: #5e6c84 !important;
+}
